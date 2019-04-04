@@ -26,11 +26,13 @@
     "tape": "^4.8.0"
   },
   "scripts": {
-    "test": "jshint simplify.js test/test.js && node test/test.js | faucet"
+    "benchmark": "node bench/array.bench.js && node bench/object.bench.js",
+    "test": "jshint simplify.js test/array.test.js test/object.test.js && node test/array.test.js | faucet && node test/object.test.js | faucet"
   },
   "jshintConfig": {
     "quotmark": "single",
     "trailing": true,
-    "unused": true
+    "unused": true,
+    "esversion": 6
   }
 }
